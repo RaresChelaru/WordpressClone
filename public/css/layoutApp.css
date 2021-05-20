@@ -1,0 +1,21 @@
+.sidebar{
+    height: 97.25vh;
+    width: 160px;
+}
+
+li:hover{
+    background-color: gray !important;
+}
+
+a{
+    text-decoration: none !important;
+    color: white !important;
+}
+
+a.dropdown-item:hover{
+    background-color: gray !important;
+}
+
+a::after{
+    content: none !important; 
+}
