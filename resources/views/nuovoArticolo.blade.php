@@ -1,8 +1,15 @@
-@extends('/.app')
+@extends('app')
 
 @section('nuovoArticolo')
 <div class="container">
     <div class="row">
-            <h1>egahgwr</h1>
+        <form>
+            <label for="">Titolo</label>
+            <input type="text">
+            <label for="">Testo</label>
+            <input type="text">
+            <input type="button" value="">
+        </form>
     </div>
 </div>
+@endsection

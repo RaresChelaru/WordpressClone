@@ -60,11 +60,12 @@
                 </li>
             </ul>
         </div>
-
+        @hasSection('nuovoArticolo')
         <div class="container align-content-center">
             @yield('nuovoArticolo')
 
         </div>
+        @endif
 </body>
 
 </html>
