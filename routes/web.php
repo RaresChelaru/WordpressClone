@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\nuovoArticolo;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/nuovoArticolo', [nuovoArticolo::class, 'f1']);
+Route::post('/insertArticolo',[nuovoArticolo::class, 'insertArticolo']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

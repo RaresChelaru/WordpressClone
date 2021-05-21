@@ -29,7 +29,7 @@
             <ul class="list-unstyled components dropdown pt-2 bg-dark">
                 <li class="dropend p-1 bg-dark">
                     <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
-                        <img src="https://img-premium.flaticon.com/png/512/3378/3378284.png?token=exp=1621524939~hmac=dbac293082e00188baa6b93e083be3ee" alt=":C" style="filter: grayscale(100%) invert(100%); width:24px;"> Articoli</a>
+                        <img src="https://image.flaticon.com/icons/png/512/3378/3378284.png" alt=":C" style="filter: grayscale(100%) invert(100%); width:24px;"> Articoli</a>
                     <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
                         <li>
                             <a href="" class="dropdown-item text-light bg-dark">Tutti gli articoli</a>
@@ -59,9 +59,7 @@
         </div>
         
         <div class="container align-content-center">
-            @yield('nuovoArticolo')
-
-        </div>
-</body>
+            @yield('formArticoli')
+            @yield('listaArticoli')
 
 </html>
