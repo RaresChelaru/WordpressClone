@@ -11,7 +11,9 @@ CREATE TABLE IF NOT EXISTS Articoli (
     titolo VARCHAR(50),
     testo VARCHAR(100),
     immagine INT,
-    categoria ,
+    categoria VARCHAR(20),
+    Utenteid INT,
+    FOREIGN KEY (Utenteid) REFERENCES Users(id), /* Tabella users di Laravel */
     FOREIGN KEY (immagine) REFERENCES Immagini(id),
     FOREIGN KEY (categoria) REFERENCES Categorie(nomeCategoria)
 );  
@@ -19,12 +21,16 @@ CREATE TABLE IF NOT EXISTS Articoli (
 DROP TABLE IF EXISTS Categorie;
 
 CREATE TABLE IF NOT EXISTS Categorie(
-    nomeCategoria VARCHAR(20) PRIMARY KEY
+    nomeCategoria VARCHAR(20) PRIMARY KEY UNIQUE,
+    Utenteid INT,
+    FOREIGN KEY (Utenteid) REFERENCES Users(id)
 );
 
 DROP TABLE IF EXISTS Immagine;
 
 CREATE TABLE IF NOT EXISTS Immagini(
     id INT unsigned auto_increment PRIMARY KEY,
-    pathImmagini VARCHAR(100)
+    pathImmagini VARCHAR(100),
+    Utenteid INT,
+    FOREIGN KEY (Utenteid) REFERENCES Users(id),
 );
