@@ -26,5 +26,5 @@ DROP TABLE IF EXISTS Immagine;
 
 CREATE TABLE IF NOT EXISTS Immagini(
     id INT unsigned auto_increment PRIMARY KEY,
-    pathImmagini VARCHAR(20)
+    pathImmagini VARCHAR(100)
 );
