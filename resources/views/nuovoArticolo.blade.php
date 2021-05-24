@@ -11,7 +11,6 @@
             <input type="text" name="titolo" id="">
             <label>Testo</label>
             <input type="text" name="testo" id="">
-            <input type="file" name="immagine">
             <input type="submit" value="submit">
             
         </form>

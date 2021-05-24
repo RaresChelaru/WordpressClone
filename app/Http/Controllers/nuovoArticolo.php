@@ -15,7 +15,7 @@ class nuovoArticolo extends Controller
 
     public function insertArticolo(Request $req){
         //insert method
-        DB::table('articoli')->insert(['titolo' => $req->input('titolo'), 'testo' => $req->input('testo'), 'immagine' => file_get_contents($req->input('immagine'))]);
+        DB::table('articoli')->insert(['titolo' => $req->input('titolo'), 'testo' => $req->input('testo')]);
         return view('listaArticoli');
         //return DB::table('articoli')->get('titolo');
     }

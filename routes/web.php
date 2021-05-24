@@ -15,7 +15,11 @@ use App\Http\Controllers\nuovoArticolo;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+Route::get('/listaArticoli', function () {
+    return view('listaArticoli');
 });
 
 Route::get('/nuovoArticolo', [nuovoArticolo::class, 'f1']);

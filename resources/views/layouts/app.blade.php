@@ -20,8 +20,26 @@
             <li class="nav-item">
                 <a href="#" class="p-1"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" alt=":(" style="filter: invert(100%); width:24px;" /></a>
             </li>
+            <li>
+                <div class="">
+                    @if (Route::has('login'))
+                        <div class="px-2">
+                            @auth
+                                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                            @else
+                                <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+        
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                                @endif
+                            @endauth
+                        </div>
+                    @endif
+            </li>
         </ul>
     </nav>
+
+    
 
     <div class="d-flex flex-row ">
 
@@ -61,5 +79,6 @@
         <div class="container align-content-center">
             @yield('formArticoli')
             @yield('listaArticoli')
+            @yield('listaCategorie')
 
 </html>
