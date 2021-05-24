@@ -25,13 +25,14 @@
                     @if (Route::has('login'))
                         <div class="px-2">
                             @auth
-                                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline"> <img src="https://image.flaticon.com/icons/png/512/1077/1077114.png" style="width: 24px; filter: invert(100%);" alt=""> Utente</a>
                             @else
                                 <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
         
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
                                 @endif
+                            
                             @endauth
                         </div>
                     @endif
