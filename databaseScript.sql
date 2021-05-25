@@ -2,6 +2,7 @@ CREATE DATABASE IF NOT EXISTS WordpressClone;
 
 USE WordpressClone;
 
+<<<<<<< Updated upstream
 DROP TABLE IF EXISTS Categorie;
 
 CREATE TABLE IF NOT EXISTS Categorie(
@@ -19,12 +20,15 @@ CREATE TABLE IF NOT EXISTS Immagini(
     FOREIGN KEY (Utenteid) REFERENCES Users(id)
 );
 
+=======
+>>>>>>> Stashed changes
 DROP TABLE IF EXISTS Articoli;
 
 CREATE TABLE IF NOT EXISTS Articoli (
     id INT unsigned auto_increment PRIMARY KEY,
     titolo VARCHAR(50),
     testo VARCHAR(100),
+<<<<<<< Updated upstream
     immagine INT UNSIGNED,
     categoria VARCHAR(20),
     Utenteid BIGINT UNSIGNED NOT NULL,
@@ -32,4 +36,8 @@ CREATE TABLE IF NOT EXISTS Articoli (
     /* Tabella users di */
     FOREIGN KEY (immagine) REFERENCES Immagini(id),
     FOREIGN KEY (categoria) REFERENCES Categorie(nomeCategoria)
+=======
+    immagine BLOB,
+    categoria varchar(20)
+>>>>>>> Stashed changes
 );
