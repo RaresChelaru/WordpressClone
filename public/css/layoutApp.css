@@ -19,3 +19,14 @@ a.dropdown-item:hover{
 a::after{
     content: none !important; 
 }
+
+.text-dark{
+    border-style: ridge;
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
+.text-dark:hover{
+    background-color: gray;
+    
+}

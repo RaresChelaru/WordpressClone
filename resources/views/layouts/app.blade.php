@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" style="overflow: hidden;"
 
 <head>
     <meta charset="utf-8">
@@ -51,13 +51,13 @@
                         <img src="https://image.flaticon.com/icons/png/512/3378/3378284.png" alt=":C" style="filter: grayscale(100%) invert(100%); width:24px;"> Articoli</a>
                     <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
                         <li>
-                            <a href="" class="dropdown-item text-light bg-dark">Tutti gli articoli</a>
+                            <a href="{{url('listaArticoli')}}" class="dropdown-item text-light bg-dark">Tutti gli articoli</a>
                         </li>
                         <li>
-                            <a href="" class="dropdown-item text-light bg-dark">Aggiungi nuovo</a>
+                            <a href="{{url('nuovoArticolo')}}" class="dropdown-item text-light bg-dark">Aggiungi nuovo</a>
                         </li>
                         <li>
-                            <a href="" class="dropdown-item text-light bg-dark">Categorie</a>
+                            <a href="{{url('listaCategorie')}}" class="dropdown-item text-light bg-dark">Categorie</a>
                         </li>
                     </ul>
                 </li>
@@ -67,7 +67,7 @@
                         <img src="https://image.flaticon.com/icons/png/512/3342/3342176.png" alt="" style="filter: invert(100%); width:24px;" /> Galleria</a>
                     <ul class="dropdown-menu text-light bg-dark" aria-labelledby="dropdownMenuButton1">
                         <li>
-                            <a href="/welcome" class="dropdown-item text-light bg-dark">Libreria</a>
+                            <a href="" class="dropdown-item text-light bg-dark">Libreria</a>
                         </li>
                         <li>
                             <a href="" class="dropdown-item text-light bg-dark">Aggiungi nuovo</a>
@@ -79,7 +79,9 @@
         
         <div class="container align-content-center">
             @yield('formArticoli')
+            @yield('formCategorie')
             @yield('listaArticoli')
             @yield('listaCategorie')
+            
 
 </html>

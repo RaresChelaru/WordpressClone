@@ -4,10 +4,23 @@
 
 <div class="container">
     <div class="row">
+        <a href="{{'nuovoArticolo'}}" class="text-dark">Nuovo articolo</a>
+        <table class="border">
+            <tr>
+                <th>Titolo</th>
+                <th>Categoria</th>
+            </tr>
+
+            @foreach (DB::table('articoli')->get('*'); as $row)
+            <td>{{$row->titolo}}</td>
+            @endforeach
+
+            @foreach (DB::table('articoli')->get('*'); as $row)
+            <td>{{$row->categoria}}</td>
+            @endforeach
+        </table>
         
-        @foreach (DB::table('articoli')->get('titolo'); as $row)
-            <h1>{{$row->titolo}}</h1>
-        @endforeach
+        
     </div>
 </div>
     

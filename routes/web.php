@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\nuovaCategoria;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\nuovoArticolo;
 
@@ -22,8 +23,15 @@ Route::get('/listaArticoli', function () {
     return view('listaArticoli');
 });
 
+Route::get('/listaCategorie', function () {
+    return view('listaCategorie');
+});
+
 Route::get('/nuovoArticolo', [nuovoArticolo::class, 'f1']);
 Route::post('/insertArticolo',[nuovoArticolo::class, 'insertArticolo']);
+
+Route::get('/nuovaCategoria', [nuovaCategoria::class, 'f2']);
+Route::post('/insertCategoria',[nuovaCategoria::class, 'insertCategoria']);
 
 
 Route::get('/dashboard', function () {
