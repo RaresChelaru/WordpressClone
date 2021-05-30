@@ -11,15 +11,14 @@
                 <th>Categoria</th>
             </tr>
 
-            @foreach (DB::table('articoli')->get('*'); as $row)
+            @foreach (DB::table('articoli')->join('categorie', 'articoli.categoria', )->get('*'); as $row)
             <td>{{$row->titolo}}</td>
             @endforeach
 
             @foreach (DB::table('articoli')->get('*'); as $row)
-            <td>{{$row->categoria}}</td>
+            <td>{{$row->categoria->}}</td>
             @endforeach
         </table>
-        
         
     </div>
 </div>

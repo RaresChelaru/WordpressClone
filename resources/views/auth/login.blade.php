@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" alt=":(" style="width:100px; margin-left:25px;"/><h2 style="font-size: 35px">Wordpress</h2>
             </a>
         </x-slot>
 

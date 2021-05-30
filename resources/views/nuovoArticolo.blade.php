@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
-
 @section('formArticoli')    
 
 <div class="container">
-    <div class="row">
+    <div class="border">
         <form method="POST" action="/insertArticolo" class="offset-4 py-5">
             @csrf
             <label>Titolo</label><br>
@@ -20,7 +19,7 @@
                     @foreach(DB::table('categorie')->get('*') as $row)
                     <option value="{{$row->id}}">{{$row->nomeCategoria}}</option>
                     @endforeach
-                </select>
+                </select><br><br>
             
             <input type="submit" value="submit">  
         </form>

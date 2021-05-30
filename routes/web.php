@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\aggiungiImmagine;
 use App\Http\Controllers\nuovaCategoria;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\nuovoArticolo;
@@ -26,6 +27,16 @@ Route::get('/listaArticoli', function () {
 Route::get('/listaCategorie', function () {
     return view('listaCategorie');
 });
+
+Route::get('/libreria', function(){
+    return view('libreria');
+});
+
+Route::get('/aggiungiImmagine', function(){
+    return view('aggiungiImmagine');
+});
+
+Route::post('/insertImmagine',[aggiungiImmagine::class, 'insertImmagine']);
 
 Route::get('/nuovoArticolo', [nuovoArticolo::class, 'f1']);
 Route::post('/insertArticolo',[nuovoArticolo::class, 'insertArticolo']);

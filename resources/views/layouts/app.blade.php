@@ -67,10 +67,10 @@
                         <img src="https://image.flaticon.com/icons/png/512/3342/3342176.png" alt="" style="filter: invert(100%); width:24px;" /> Galleria</a>
                     <ul class="dropdown-menu text-light bg-dark" aria-labelledby="dropdownMenuButton1">
                         <li>
-                            <a href="" class="dropdown-item text-light bg-dark">Libreria</a>
+                            <a href="{{url('libreria')}}" class="dropdown-item text-light bg-dark">Libreria</a>
                         </li>
                         <li>
-                            <a href="" class="dropdown-item text-light bg-dark">Aggiungi nuovo</a>
+                            <a href="{{url('aggiungiImmagine')}}" class="dropdown-item text-light bg-dark">Aggiungi nuovo</a>
                         </li>
                     </ul>
                 </li>
@@ -82,6 +82,7 @@
             @yield('formCategorie')
             @yield('listaArticoli')
             @yield('listaCategorie')
+            @yield('libreria')
+            @yield('aggiungiImmagine')
             
-
 </html>
