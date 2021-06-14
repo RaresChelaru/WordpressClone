@@ -3,8 +3,8 @@
 @section('formArticoli')    
 
 <div class="container">
-    <div class="border">
-        <form method="POST" action="/insertArticolo" class="offset-4 py-5">
+    <div>
+        <form method="POST" action="/insertArticolo" class="border border-primary rounded offset-4 p-2" style="width: fit-content; margin-top: 150px;">
             @csrf
             <label>Titolo</label><br>
             <input type="text" name="titolo" id=""><br><br>

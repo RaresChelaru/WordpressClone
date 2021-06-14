@@ -6,8 +6,8 @@
     <div class="row">
 
         <a href="{{'nuovaCategoria'}}" class="text-dark my-3">Nuova categoria</a>
-        <table class="border">
-            <tr>
+        <table class="border border-primary ">
+            <tr class="border border-primary">
                 <th>Nome categoria</th>
                 <th>Id</th>
             </tr>
@@ -16,6 +16,7 @@
             <tr>
                 <td>{{$row->nomeCategoria}}</td>
                 <td>{{$row->id}}</td>
+            </tr>
             @endforeach
 
         </table>

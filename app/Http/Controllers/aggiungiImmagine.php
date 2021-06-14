@@ -13,8 +13,8 @@ class aggiungiImmagine extends Controller
         if(Auth::check())
         {
             $imageName = time().'.'.$req->file('immagine')->Extension();
-            $req->file('immagine')->store('images');
-            DB::table('immagini')->insert(['pathImmagini' => storage_path($imageName),'Utenteid'=>Auth::id()]);
+            
+            DB::table('immagini')->insert(['pathImmagini' => substr(storage_path($req->file('immagine')->store('public')),45),'Utenteid'=>Auth::id()]);
         }
 
         return view('libreria');    
